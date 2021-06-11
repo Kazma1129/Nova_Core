@@ -36,7 +36,7 @@ public class TwodimensionalController : MonoBehaviour
         animator = GetComponent<Animator>();
         VelocityZHash = Animator.StringToHash("Velocity Z");
         VelocityXHash = Animator.StringToHash("Velocity X");
-
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // increases or decreases velocity of animation based on keypresses.
