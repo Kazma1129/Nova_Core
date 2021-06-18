@@ -56,7 +56,9 @@ public class PlayerController : MonoBehaviour
     //Shoots
     private void OnEnable()
     {
+        
         shootAction.performed += _ => shootGun();
+        
     }
 
     private void OnDisable()
@@ -88,6 +90,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.a1 == false)
+        {
+            shootAction.Disable();
+        }
+        else {
+            shootAction.Enable();
+        }
+
+
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
