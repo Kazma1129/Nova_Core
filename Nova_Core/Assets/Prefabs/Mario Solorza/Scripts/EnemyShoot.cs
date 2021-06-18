@@ -15,8 +15,9 @@ public class EnemyShoot : MonoBehaviour
 
     //patrolling
     public Vector3 walkPoint;
-    private bool walkPointSet;
+    public bool walkPointSet;
     public float walkPointRange;
+    public float distanceToReachedMagnitude;
 
     //attack
     private bool alreadyAttacked;
@@ -25,6 +26,18 @@ public class EnemyShoot : MonoBehaviour
 
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    public float timer;
+
+    /* for missing the target, maybe I'll find a better use for this.
+    [SerializeField]
+    private float bulletHitMissDistance = 25f;
+    */
+
+
+
+
+
+
 
     private void Awake()
     {
@@ -34,10 +47,11 @@ public class EnemyShoot : MonoBehaviour
 
     private void Update()
     {
+        timer -= Time.deltaTime;
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer); // range for player
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer); //range for attack
-        
+       
         //States
         if (!playerInSightRange && !playerInAttackRange) patrolling(); // if not in sight or attack range patroll randomly
         if (playerInSightRange && !playerInAttackRange) chasePlayer(); // if player in sight but not attack range, chase player
@@ -48,35 +62,29 @@ public class EnemyShoot : MonoBehaviour
 
 
     private void patrolling() {
-        //if walkpoint is not set create it
         if (!walkPointSet) searchWalkPoint();
 
-        //if walkpoint created set agent destination to walkpoint
         if (walkPointSet)
             agent.SetDestination(walkPoint);
 
-        //check distance from agent to walkpoint
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        //walkpoint Reached so we set walkpoint set to false to generate a new coordinate.
-        if (distanceToWalkPoint.magnitude < 1f)
+        //Walkpoint reached
+        if (distanceToWalkPoint.magnitude < 3f)
             walkPointSet = false;
-
     }
 
     private void searchWalkPoint() {
-        // calculate random point in range
+        //Calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
-        //new walking point
+        //walpoint position
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-
-        //can delete this line if we don't have a ground layer.
+        //once it reaches the walkpoint it resets
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
-
     }
 
 
@@ -90,14 +98,60 @@ public class EnemyShoot : MonoBehaviour
         agent.SetDestination(transform.position); // set destination to player
         transform.LookAt(player); //look at player
 
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer //oddly enough it shoots at feet.
+        
+        if (Physics.Raycast(shootPoint.position, shootPoint.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, whatIsPlayer)) {
+            
+            Debug.DrawRay(shootPoint.position, shootPoint.TransformDirection(Vector3.forward) * hit.distance, Color.red);
+        }
+
+
         //attack based on projectile (will be replaced by raycast)
+        /*
+        if(timer <= 0) { 
         Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+        timer = timeBetweenAttacks;
+        }
+        */
 
+
+
+        /*
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+
+        if (Physics.Raycast(transform.position, fwd, Mathf.Infinity))
+            Debug.DrawRay(shootPoint.position, shootPoint.forward, Color.green);//print("There is something in front of the object!");
+
+
+
+
+
+        ////Raycast Test
+        /*
+        RaycastHit hit;
+        GameObject bullet = GameObject.Instantiate(projectile, shootPoint.position, Quaternion.identity);
+        BulletController bulletController = bullet.GetComponent<BulletController>();
+        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity))
+        {
+
+            bulletController.target = hit.point;
+            bulletController.hit = true;
+        }
+        else
+        {
+            bulletController.target = cameraTransform.position + cameraTransform.forward * bulletHitMissDistance;
+            bulletController.hit = false;
+        }
+
+        */
+
+        //////////////////////////////////////////////////////////////////////////////
         if (!alreadyAttacked)
         {
             alreadyAttacked = true;
-            Invoke(nameof(resetAttack), timeBetweenAttacks);
+            resetAttack();
         }
     }
 

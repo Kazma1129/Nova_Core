@@ -910,7 +910,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 9025515482713259575, guid: 6f52240b24d265c4d8a20542ec4f76e6,
     type: 3}
   barrelTransform: {fileID: 292171427}
-  bulletParent: {fileID: 0}
   bulletHitMissDistance: 50
 --- !u!1 &464962787
 GameObject:
@@ -1423,7 +1422,7 @@ GameObject:
   - component: {fileID: 561438010}
   - component: {fileID: 561438015}
   - component: {fileID: 561438016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3026,6 +3025,16 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: -4834107145269179017, guid: 1ffef018af946fa46add68cdc46ee16e,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: -4834107145269179017, guid: 1ffef018af946fa46add68cdc46ee16e,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3126760583184839542, guid: 1ffef018af946fa46add68cdc46ee16e,
         type: 3}
       propertyPath: m_Name
@@ -3039,7 +3048,7 @@ PrefabInstance:
     - target: {fileID: 3126760583184839547, guid: 1ffef018af946fa46add68cdc46ee16e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 15.2
       objectReference: {fileID: 0}
     - target: {fileID: 3126760583184839547, guid: 1ffef018af946fa46add68cdc46ee16e,
         type: 3}
@@ -3123,14 +3132,17 @@ MonoBehaviour:
   projectile: {fileID: 9025515482713259575, guid: 429815b1049e15a498a8c3ffffee50f4,
     type: 3}
   shootPoint: {fileID: 1305704614}
-  walkPoint: {x: 10, y: 10, z: 0}
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointSet: 0
   walkPointRange: 10
-  timeBetweenAttacks: 1
+  distanceToReachedMagnitude: 0
+  timeBetweenAttacks: 1.5
   health: 50
-  sightRange: 15
+  sightRange: 20
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
+  timer: 0
 --- !u!4 &1329724208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3126760583184839547, guid: 1ffef018af946fa46add68cdc46ee16e,
@@ -3241,7 +3253,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17812
+  m_Name: pb_Mesh17908
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

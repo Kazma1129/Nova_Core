@@ -19,8 +19,8 @@ public class PlayerController : MonoBehaviour
     private GameObject bulletPrefab; // bullet prefab
     [SerializeField]
     private Transform barrelTransform; // bullet spawn point
-    [SerializeField]
-    private Transform bulletParent;
+   // [SerializeField]  can be used for projectiles, but we are raycasting.
+   // private Transform bulletParent;
     [SerializeField]
     private float bulletHitMissDistance = 25f;
 
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     private void shootGun()
     {
         RaycastHit hit;
-        GameObject bullet = GameObject.Instantiate(bulletPrefab, barrelTransform.position, Quaternion.identity, bulletParent);
+        GameObject bullet = GameObject.Instantiate(bulletPrefab, barrelTransform.position, Quaternion.identity /*, bulletParent*/);
         BulletController bulletController = bullet.GetComponent<BulletController>();
         if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity))
         {
