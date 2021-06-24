@@ -19,10 +19,17 @@ public class PlayerController : MonoBehaviour
     private GameObject bulletPrefab; // bullet prefab
     [SerializeField]
     private Transform barrelTransform; // bullet spawn point
-   // [SerializeField]  can be used for projectiles, but we are raycasting.
-   // private Transform bulletParent;
+    [SerializeField]
+    private float dashSpeed = 25f;
+    //[SerializeField]
+    //private float dashTime = .5f; tried to use this for dash time
+    // [SerializeField]  can be used for projectiles, but we are raycasting.
+    // private Transform bulletParent;
     [SerializeField]
     private float bulletHitMissDistance = 25f;
+    public float hoverTime;
+    public float hoverTimeCooldown;
+
 
 
     private CharacterController controller; //character controller
@@ -36,11 +43,14 @@ public class PlayerController : MonoBehaviour
     private InputAction moveAction;
     private InputAction jumpAction;
     private InputAction shootAction;
+    private InputAction dashAction;
+    private InputAction hoverAction;
+    
 
- 
 
     private void Awake()
     {
+
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         cameraTransform = Camera.main.transform;
@@ -49,7 +59,9 @@ public class PlayerController : MonoBehaviour
         moveAction = playerInput.actions["Movement"];
         jumpAction = playerInput.actions["Jump"];
         shootAction = playerInput.actions["Shoot"];
-        
+        dashAction = playerInput.actions["Dash"];
+        hoverAction = playerInput.actions["Dash"];
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -71,10 +83,10 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         GameObject bullet = GameObject.Instantiate(bulletPrefab, barrelTransform.position, Quaternion.identity /*, bulletParent*/);
         BulletController bulletController = bullet.GetComponent<BulletController>();
-        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity))
+        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity)) //basically if raycast hits
         {
 
-            bulletController.target = hit.point;
+            bulletController.target = hit.point; //targets equals hit point
             bulletController.hit = true;
         }
         else {
@@ -100,7 +112,7 @@ public class PlayerController : MonoBehaviour
 
 
         groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
+        if (groundedPlayer && playerVelocity.y < 0) //player velocity if grounded //to avoid going below zero
         {
             playerVelocity.y = 0f;
         }
@@ -112,20 +124,36 @@ public class PlayerController : MonoBehaviour
         move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
         //to avoid unity setting the y value itself
         move.y = 0;
-        controller.Move(move * Time.deltaTime * playerSpeed);
+        controller.Move(move * Time.deltaTime * playerSpeed); //moves
 
   
 
         // Changes the height position of the player...so a jump
         if (jumpAction.triggered && groundedPlayer)
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+                playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);   
+        }
+        if (/*!groundedPlayer &&*/ dashAction.triggered) // dash remove commented code to enable only on air or ground dash
+        {
+           /* float startTime = Time.time;
+            while(Time.time < startTime + dashTime) //tried adding dash time to the player, turn out doing this hangs the project.
+            { */
+            controller.Move(move * Time.deltaTime * playerSpeed * dashSpeed);
+            /*   return;
+            }*/
         }
 
+        if (!groundedPlayer && hoverAction.triggered) // dash remove commented code to enable only on air or ground dash
+        {
+ 
+
+        }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
-        //moves character.
-        controller.Move(playerVelocity * Time.deltaTime);
+            //moves character.
+            controller.Move(playerVelocity * Time.deltaTime);
+        
+
 
 
         //rotates towards camera direction

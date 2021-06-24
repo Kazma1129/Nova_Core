@@ -12,7 +12,8 @@ public class weaponchangeSwitch : MonoBehaviour
     public Transform g2;
 
     private void Update()
-    {
+    { 
+        //set visible and enables weapon based on keypresses
         if (Keyboard.current.digit1Key.wasPressedThisFrame) {
             transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(1).gameObject.SetActive(false);

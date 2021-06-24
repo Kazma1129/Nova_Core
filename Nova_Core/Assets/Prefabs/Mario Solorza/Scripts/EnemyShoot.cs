@@ -6,28 +6,35 @@ using UnityEngine.AI;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public NavMeshAgent agent;
+    public static float damageToPlayer;
 
+    [Header("Transform etc")]
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
     public GameObject projectile;
     public Transform shootPoint;
+    public NavMeshAgent agent;
+    private bool hit;
 
     //patrolling
+    [Header("Patrolling Settings")]
     public Vector3 walkPoint;
     public bool walkPointSet;
     public float walkPointRange;
     public float distanceToReachedMagnitude;
 
     //attack
-    private bool alreadyAttacked;
+    [Header("Attack Settings")]
     public float timeBetweenAttacks;
+    private bool alreadyAttacked;
     public float health;
-
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     public float timer;
+    public float damageTP;
+    private Transform cameraTransform; //to get main camera.
 
+    
     /* for missing the target, maybe I'll find a better use for this.
     [SerializeField]
     private float bulletHitMissDistance = 25f;
@@ -41,8 +48,11 @@ public class EnemyShoot : MonoBehaviour
 
     private void Awake()
     {
+        damageToPlayer = damageTP;
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        cameraTransform = Camera.main.transform;
+
     }
 
     private void Update()
@@ -57,6 +67,14 @@ public class EnemyShoot : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) chasePlayer(); // if player in sight but not attack range, chase player
         if (playerInAttackRange && playerInSightRange) attackPlayer();   //if in range and sight range attack player (stops and attacks)
 
+        if (hit)
+        {
+            health -= GameManager.Instance.bullet1Damage;
+            hit = false;
+        }
+
+        if (health <= 0)
+            Destroy(this.gameObject);
 
     }
 
@@ -98,15 +116,20 @@ public class EnemyShoot : MonoBehaviour
         agent.SetDestination(transform.position); // set destination to player
         transform.LookAt(player); //look at player
 
+        
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer //oddly enough it shoots at feet.
+     
+            if (timer <=0 &&Physics.Raycast(shootPoint.position, shootPoint.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, whatIsPlayer))
+            {
+
+                Debug.DrawRay(shootPoint.position, shootPoint.TransformDirection(Vector3.forward) * hit.distance, Color.red);
+                Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
+                rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+                timer = timeBetweenAttacks;
+            }
         
-        if (Physics.Raycast(shootPoint.position, shootPoint.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, whatIsPlayer)) {
-            
-            Debug.DrawRay(shootPoint.position, shootPoint.TransformDirection(Vector3.forward) * hit.distance, Color.red);
-        }
-
-
+        
         //attack based on projectile (will be replaced by raycast)
         /*
         if(timer <= 0) { 
@@ -115,7 +138,7 @@ public class EnemyShoot : MonoBehaviour
         timer = timeBetweenAttacks;
         }
         */
-
+        
 
 
         /*
@@ -158,20 +181,23 @@ public class EnemyShoot : MonoBehaviour
     private void resetAttack() {
         alreadyAttacked = false;
     }
-    /* WIP
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
 
-        if (health <= 0)
-            DestroyEnemy();
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player Bullet")
+        {
+            hit = true;
+        }
     }
+
+    
 
     private void DestroyEnemy()
     {
         Destroy(gameObject,.5f);
     }
-    */
+    
 
 
     // for range visualization
