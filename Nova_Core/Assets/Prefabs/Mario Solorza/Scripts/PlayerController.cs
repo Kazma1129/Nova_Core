@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour
     // private Transform bulletParent;
     [SerializeField]
     private float bulletHitMissDistance = 25f;
-    public float hoverTime;
-    public float hoverTimeCooldown;
+    
 
 
 
@@ -44,8 +43,7 @@ public class PlayerController : MonoBehaviour
     private InputAction jumpAction;
     private InputAction shootAction;
     private InputAction dashAction;
-    private InputAction hoverAction;
-    
+
 
 
     private void Awake()
@@ -60,7 +58,6 @@ public class PlayerController : MonoBehaviour
         jumpAction = playerInput.actions["Jump"];
         shootAction = playerInput.actions["Shoot"];
         dashAction = playerInput.actions["Dash"];
-        hoverAction = playerInput.actions["Dash"];
 
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -133,6 +130,7 @@ public class PlayerController : MonoBehaviour
         {
                 playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);   
         }
+
         if (/*!groundedPlayer &&*/ dashAction.triggered) // dash remove commented code to enable only on air or ground dash
         {
            /* float startTime = Time.time;
@@ -143,11 +141,7 @@ public class PlayerController : MonoBehaviour
             }*/
         }
 
-        if (!groundedPlayer && hoverAction.triggered) // dash remove commented code to enable only on air or ground dash
-        {
- 
-
-        }
+   
 
         playerVelocity.y += gravityValue * Time.deltaTime;
             //moves character.
