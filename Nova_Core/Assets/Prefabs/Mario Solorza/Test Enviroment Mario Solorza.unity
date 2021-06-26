@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: f66d9dede5dfccc4c951ef8c72bda3a0,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1361,7 +1361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783784902}
   m_LocalRotation: {x: 0.020854566, y: 0.09148156, z: -0.0019162656, w: 0.9955865}
-  m_LocalPosition: {x: -10.559437, y: 2.5115216, z: -5.379908}
+  m_LocalPosition: {x: -10.878418, y: 2.5115216, z: -5.3207884}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2218,7 +2218,7 @@ PrefabInstance:
     - target: {fileID: 5890042177856696590, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.559437
+      value: -10.878418
       objectReference: {fileID: 0}
     - target: {fileID: 5890042177856696590, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
@@ -2228,7 +2228,7 @@ PrefabInstance:
     - target: {fileID: 5890042177856696590, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.379908
+      value: -5.3207884
       objectReference: {fileID: 0}
     - target: {fileID: 5890042177856696590, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
@@ -2367,7 +2367,7 @@ PrefabInstance:
     - target: {fileID: 5890042177856696590, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.622826
+      value: -10.827578
       objectReference: {fileID: 0}
     - target: {fileID: 5890042177856696590, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
@@ -2377,7 +2377,7 @@ PrefabInstance:
     - target: {fileID: 5890042177856696590, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.0680304
+      value: -4.0300817
       objectReference: {fileID: 0}
     - target: {fileID: 5890042177856696590, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
@@ -2427,7 +2427,7 @@ PrefabInstance:
     - target: {fileID: 5890042177856696591, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
       propertyPath: m_Priority
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5890042177856696591, guid: 71f48fad81bd7ad43a71af8ff2012dbe,
         type: 3}
