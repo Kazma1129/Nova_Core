@@ -38,6 +38,11 @@ public class PlayerController : MonoBehaviour
     // private Transform bulletParent;
     [SerializeField]
     private float bulletHitMissDistance = 25f;
+    [SerializeField]
+    private float hoverTime = 2f;
+    public float hoverTimer = 0;
+    public bool isHovering = false;
+
 
     private CharacterController controller; //character controller
     private PlayerInput playerInput; // to get input actions from the input system
@@ -50,6 +55,8 @@ public class PlayerController : MonoBehaviour
     private InputAction jumpAction;
     private InputAction shootAction;
     private InputAction dashAction;
+    private InputAction hoverAction;
+
 
     private void Awake()
     {
@@ -62,6 +69,7 @@ public class PlayerController : MonoBehaviour
         jumpAction = playerInput.actions["Jump"];
         shootAction = playerInput.actions["Shoot"];
         dashAction = playerInput.actions["Dash"];
+        hoverAction = playerInput.actions["Hover"];
 
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -69,14 +77,27 @@ public class PlayerController : MonoBehaviour
     //Shoots
     private void OnEnable()
     {
-        shootAction.performed += _ => shootGun();
+        hoverAction.performed += _ => hover();// subscribes to hover event.
+        shootAction.performed += _ => shootGun(); // subscribes to shooting event.
     }
 
     private void OnDisable()
     {
-        shootAction.performed -= _ => shootGun();
+        hoverAction.performed -= _ => hover(); // de-subscribes to hover event.
+        shootAction.performed -= _ => shootGun();  // de-subscribes to shooting event.
     }
 
+    // hover function // see code below for how this was disabled.
+    void hover() {
+        hoverTimer = 0;
+        gravityValue = 0;
+        isHovering = true;
+    }
+
+    void Stophover()
+    {
+        gravityValue = -9.81f;
+    }
     private void shootGun()
     {
         RaycastHit hit;
@@ -100,12 +121,19 @@ public class PlayerController : MonoBehaviour
     //*****Esto es para poder meterlo al main, es el cooldown del salto
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
+        hoverAction.Disable();
+
     }
+
+
+
+
 
     void Update()
     {
         jumpTimer -= Time.deltaTime;
+        hoverTimer += Time.deltaTime;
 
         if (GameManager.Instance.a1 == false)
         {
@@ -131,6 +159,22 @@ public class PlayerController : MonoBehaviour
         move.y = 0;
         controller.Move(move * Time.deltaTime * playerSpeed); //moves
 
+
+        //handles hover.
+        if (hoverAction.triggered && !isHovering)
+        {
+            
+            hoverAction.Enable();
+        }
+
+        if (isHovering && hoverTimer > hoverTime)
+        {
+            isHovering = false;
+            Stophover(); // call the function directly for some reason doing this from DISABLE did not worked.
+        }
+
+
+
         // Changes the height position of the player...so a jump
         if (jumpAction.triggered && groundedPlayer)
         {
@@ -155,8 +199,7 @@ public class PlayerController : MonoBehaviour
             }*/
         }
 
-
-
+   
         playerVelocity.y += gravityValue * Time.deltaTime;
         //moves character.
         controller.Move(playerVelocity * Time.deltaTime);

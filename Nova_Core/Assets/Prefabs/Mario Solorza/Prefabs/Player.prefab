@@ -309,7 +309,6 @@ GameObject:
   - component: {fileID: 25165252286084080}
   - component: {fileID: 25165252286084082}
   - component: {fileID: 25165252286084077}
-  - component: {fileID: 8401789769321126807}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -396,6 +395,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   jumpHeight: 1
+  DoublejumpHeight: 0.8
+  doubleJump: 1
+  isJumping: 0
+  jumpCooldown: 0.1
+  jumpTimer: 0
   gravityValue: -9.81
   rotationSpeed: 25
   bulletPrefab: {fileID: 9025515482713259575, guid: 6f52240b24d265c4d8a20542ec4f76e6,
@@ -403,6 +407,9 @@ MonoBehaviour:
   barrelTransform: {fileID: 25165251904609310}
   dashSpeed: 25
   bulletHitMissDistance: 50
+  hoverTime: 2
+  hoverTimer: 0
+  isHovering: 1
 --- !u!114 &25165252286084082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,27 +437,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.4
   m_Center: {x: 0, y: 0.36, z: 0}
---- !u!114 &8401789769321126807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25165252286084087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35772a4f54380904688a6feec20cb4d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multiplier: 2
-  moveForce: 1.5
-  turnTorque: 1.5
-  anchors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  hoverObject: {fileID: 0}
 --- !u!1 &25165252766166215
 GameObject:
   m_ObjectHideFlags: 0

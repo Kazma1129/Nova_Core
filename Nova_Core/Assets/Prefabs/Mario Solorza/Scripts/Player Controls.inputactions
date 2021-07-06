@@ -56,7 +56,7 @@
                 {
                     "name": "Hover",
                     "type": "Button",
-                    "id": "215ad5b8-6ac4-4550-a173-a4d69861fa8e",
+                    "id": "c214b419-0ccb-4642-adbf-96ec562c19da",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -175,8 +175,19 @@
                 },
                 {
                     "name": "",
-                    "id": "bb9a2281-9c02-4f45-afc3-8b5135e6720e",
-                    "path": "<Keyboard>/ctrl",
+                    "id": "6abbac25-06c8-4afd-8db2-d432912cc411",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee9fba7d-34f1-4d12-ac89-3df49bd93c85",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
