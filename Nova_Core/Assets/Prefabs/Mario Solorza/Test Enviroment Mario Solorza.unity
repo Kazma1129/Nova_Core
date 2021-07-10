@@ -3547,6 +3547,11 @@ PrefabInstance:
       propertyPath: isHovering
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 25165252286084080, guid: e0560cbbe6dfebe4f919163056a27422,
+        type: 3}
+      propertyPath: playerSpeed
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 25165252286084081, guid: e0560cbbe6dfebe4f919163056a27422,
         type: 3}
       propertyPath: m_Camera
