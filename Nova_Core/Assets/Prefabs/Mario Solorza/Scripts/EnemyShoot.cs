@@ -40,12 +40,6 @@ public class EnemyShoot : MonoBehaviour
     private float bulletHitMissDistance = 25f;
     */
 
-
-
-
-
-
-
     private void Awake()
     {
         damageToPlayer = damageTP;
