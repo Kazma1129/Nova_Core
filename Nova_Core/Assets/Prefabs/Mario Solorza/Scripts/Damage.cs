@@ -19,10 +19,6 @@ public class Damage : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-    }
-
 
 
     // Update is called once per frame

@@ -42,7 +42,7 @@ public class EnemyShoot : MonoBehaviour
 
     private void Awake()
     {
-        damageToPlayer = damageTP;
+        //damageToPlayer = damageTP;
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         cameraTransform = Camera.main.transform;
