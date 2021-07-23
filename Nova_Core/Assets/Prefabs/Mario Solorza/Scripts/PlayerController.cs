@@ -98,11 +98,14 @@ public class PlayerController : MonoBehaviour
     {
         gravityValue = -9.81f;
     }
+   
+    
     private void shootGun()
     {
         RaycastHit hit;
         GameObject bullet = GameObject.Instantiate(bulletPrefab, barrelTransform.position, Quaternion.identity /*, bulletParent*/);
         BulletController bulletController = bullet.GetComponent<BulletController>();
+    
         if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity)) //basically if raycast hits
         {
 

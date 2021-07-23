@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public static float damageToPlayer;
 
     [Header("Transform etc")]
     public Transform player;
@@ -32,6 +31,7 @@ public class EnemyShoot : MonoBehaviour
     public bool playerInSightRange, playerInAttackRange;
     public float timer;
     public float damageTP;
+    public static float damageToPlayer;
     private Transform cameraTransform; //to get main camera.
 
     
