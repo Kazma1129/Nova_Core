@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller; //character controller
     private PlayerInput playerInput; // to get input actions from the input system
     private Vector3 playerVelocity;
-    private bool groundedPlayer;
+    public bool groundedPlayer;
     private Transform cameraTransform; //to get main camera.
 
     //Declaring input actions from input system.
@@ -164,6 +164,8 @@ public class PlayerController : MonoBehaviour
         hoverTimer += Time.deltaTime;
         idleTimer += Time.deltaTime;
 
+        
+        
         if (playerInput.actions["Movement"].IsPressed()) {
             runningAction();
         }
@@ -171,6 +173,7 @@ public class PlayerController : MonoBehaviour
         {
            stopRunningAction();
         }
+        animator.SetBool("isRunning", isRunning);
 
 
 
@@ -199,7 +202,6 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-            animator.SetBool("isRunning", isRunning); 
         
         
         Vector2 input = moveAction.ReadValue<Vector2>();
@@ -233,6 +235,7 @@ public class PlayerController : MonoBehaviour
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
             isJumping = true;
+            animator.SetBool("isJumping", isJumping);
             jumpTimer = jumpCooldown;
         }
 
@@ -240,8 +243,8 @@ public class PlayerController : MonoBehaviour
         {
             playerVelocity.y += Mathf.Sqrt(DoublejumpHeight * -3.0f * gravityValue);
             isJumping = false;
+          
         }
-
         if (/*!groundedPlayer &&*/ dashAction.triggered) // dash remove commented code to enable only on air or ground dash
         {
             /* float startTime = Time.time;
