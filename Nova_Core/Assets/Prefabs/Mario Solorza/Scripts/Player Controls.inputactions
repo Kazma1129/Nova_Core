@@ -78,7 +78,7 @@
                     "name": "WASD",
                     "id": "11fc0701-0171-44da-a2af-d80a463554bc",
                     "path": "2DVector",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Movement",

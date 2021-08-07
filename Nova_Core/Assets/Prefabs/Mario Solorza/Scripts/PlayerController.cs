@@ -57,12 +57,25 @@ public class PlayerController : MonoBehaviour
     private InputAction dashAction;
     private InputAction hoverAction;
 
+    /// <summary>
+    /// Animation variables
+    /// </summary>
+
+    public bool isRunning = false;
+    public bool idleLong = false;
+    public float idleTimer = 3f;
+    private float idleTime = 0f;
+    private bool isShooting = false;
+    private bool moveHash;
+    Animator animator;
+
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         cameraTransform = Camera.main.transform;
+        animator = GetComponent<Animator>();
 
         // setting up input values from new input system and cursos lock state so we are bound to the screen.
         moveAction = playerInput.actions["Movement"];
@@ -79,12 +92,14 @@ public class PlayerController : MonoBehaviour
     {
         hoverAction.performed += _ => hover();// subscribes to hover event.
         shootAction.performed += _ => shootGun(); // subscribes to shooting event.
+        
     }
 
     private void OnDisable()
     {
         hoverAction.performed -= _ => hover(); // de-subscribes to hover event.
         shootAction.performed -= _ => shootGun();  // de-subscribes to shooting event.
+
     }
 
     // hover function // see code below for how this was disabled.
@@ -98,8 +113,17 @@ public class PlayerController : MonoBehaviour
     {
         gravityValue = -9.81f;
     }
-   
-    
+
+    void runningAction() {
+        isRunning = true;
+    }
+    void stopRunningAction()
+    {
+        isRunning = false;
+    }
+
+
+
     private void shootGun()
     {
         RaycastHit hit;
@@ -117,6 +141,7 @@ public class PlayerController : MonoBehaviour
             bulletController.target = cameraTransform.position + cameraTransform.forward * bulletHitMissDistance;
             bulletController.hit = false;
         }
+        
 
     }
     //shoot end
@@ -137,6 +162,27 @@ public class PlayerController : MonoBehaviour
     {
         jumpTimer -= Time.deltaTime;
         hoverTimer += Time.deltaTime;
+        idleTimer += Time.deltaTime;
+
+        if (playerInput.actions["Movement"].IsPressed()) {
+            runningAction();
+        }
+        else if (!playerInput.actions["Movement"].IsPressed())
+        {
+           stopRunningAction();
+        }
+
+
+
+
+        if (idleTime > idleTimer && !isRunning && !isShooting)
+        {
+            idleLong = true;
+        }
+        else {
+            idleLong = false;
+        }
+
 
         if (GameManager.Instance.a1 == false)
         {
@@ -153,15 +199,19 @@ public class PlayerController : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
+            animator.SetBool("isRunning", isRunning); 
+        
+        
         Vector2 input = moveAction.ReadValue<Vector2>();
         Vector3 move = new Vector3(input.x, 0, input.y);
+        
 
         // takes into account camera direction while moving.
         move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
         //to avoid unity setting the y value itself
         move.y = 0;
         controller.Move(move * Time.deltaTime * playerSpeed); //moves
-
+      
 
         //handles hover.
         if (hoverAction.triggered && !isHovering)
