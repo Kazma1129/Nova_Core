@@ -42,7 +42,9 @@ public class PlayerController : MonoBehaviour
     private float hoverTime = 2f;
     public float hoverTimer = 0;
     public bool isHovering = false;
-
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    public float groundcheckRadius = 0.1f;
 
     private CharacterController controller; //character controller
     private PlayerInput playerInput; // to get input actions from the input system
@@ -61,21 +63,19 @@ public class PlayerController : MonoBehaviour
     /// Animation variables
     /// </summary>
 
-    public bool isRunning = false;
-    public bool idleLong = false;
-    public float idleTimer = 3f;
-    private float idleTime = 0f;
-    private bool isShooting = false;
-    private bool moveHash;
-    Animator animator;
 
+
+
+    Animator animator;
+    int moveXAnimationParameterId;
+    int moveZAnimationParameterId;
 
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         cameraTransform = Camera.main.transform;
-        animator = GetComponent<Animator>();
+
 
         // setting up input values from new input system and cursos lock state so we are bound to the screen.
         moveAction = playerInput.actions["Movement"];
@@ -85,6 +85,9 @@ public class PlayerController : MonoBehaviour
         hoverAction = playerInput.actions["Hover"];
 
         Cursor.lockState = CursorLockMode.Locked;
+        animator = GetComponent<Animator>();
+        moveXAnimationParameterId = Animator.StringToHash("MoveX");
+        moveZAnimationParameterId = Animator.StringToHash("MoveZ");
     }
 
     //Shoots
@@ -114,14 +117,7 @@ public class PlayerController : MonoBehaviour
         gravityValue = -9.81f;
     }
 
-    void runningAction() {
-        isRunning = true;
-    }
-    void stopRunningAction()
-    {
-        isRunning = false;
-    }
-
+ 
 
 
     private void shootGun()
@@ -162,29 +158,11 @@ public class PlayerController : MonoBehaviour
     {
         jumpTimer -= Time.deltaTime;
         hoverTimer += Time.deltaTime;
-        idleTimer += Time.deltaTime;
 
         
-        
-        if (playerInput.actions["Movement"].IsPressed()) {
-            runningAction();
-        }
-        else if (!playerInput.actions["Movement"].IsPressed())
-        {
-           stopRunningAction();
-        }
-        animator.SetBool("isRunning", isRunning);
 
 
 
-
-        if (idleTime > idleTimer && !isRunning && !isShooting)
-        {
-            idleLong = true;
-        }
-        else {
-            idleLong = false;
-        }
 
 
         if (GameManager.Instance.a1 == false)
@@ -196,10 +174,12 @@ public class PlayerController : MonoBehaviour
             shootAction.Enable();
         }
 
-        groundedPlayer = controller.isGrounded;
+        //groundedPlayer = controller.isGrounded;
+        groundedPlayer = Physics.CheckSphere(groundCheck.position, groundcheckRadius, groundLayer) ;
         if (groundedPlayer && playerVelocity.y < 0) //player velocity if grounded //to avoid going below zero
         {
             playerVelocity.y = 0f;
+
         }
 
         
@@ -207,14 +187,16 @@ public class PlayerController : MonoBehaviour
         Vector2 input = moveAction.ReadValue<Vector2>();
         Vector3 move = new Vector3(input.x, 0, input.y);
         
-
+        
         // takes into account camera direction while moving.
         move = move.x * cameraTransform.right.normalized + move.z * cameraTransform.forward.normalized;
         //to avoid unity setting the y value itself
         move.y = 0;
         controller.Move(move * Time.deltaTime * playerSpeed); //moves
-      
 
+        //blend starfe animation
+        animator.SetFloat(moveXAnimationParameterId, input.x);
+        animator.SetFloat(moveZAnimationParameterId, input.y);
         //handles hover.
         if (hoverAction.triggered && !isHovering)
         {
@@ -235,7 +217,6 @@ public class PlayerController : MonoBehaviour
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
             isJumping = true;
-            animator.SetBool("isJumping", isJumping);
             jumpTimer = jumpCooldown;
         }
 
@@ -247,12 +228,9 @@ public class PlayerController : MonoBehaviour
         }
         if (/*!groundedPlayer &&*/ dashAction.triggered) // dash remove commented code to enable only on air or ground dash
         {
-            /* float startTime = Time.time;
-             while(Time.time < startTime + dashTime) //tried adding dash time to the player, turn out doing this hangs the project.
-             { */
+
             controller.Move(move * Time.deltaTime * playerSpeed * dashSpeed);
-            /*   return;
-            }*/
+
         }
 
    
