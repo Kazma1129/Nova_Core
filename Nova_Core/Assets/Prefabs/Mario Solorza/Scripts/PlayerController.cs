@@ -63,12 +63,15 @@ public class PlayerController : MonoBehaviour
     /// Animation variables
     /// </summary>
 
-
-
+    [SerializeField]
+    private float animationSmoothTime = 0.1f;
 
     Animator animator;
     int moveXAnimationParameterId;
     int moveZAnimationParameterId;
+
+    Vector2 currentAnimationBlendVector;
+    Vector2 animationVelocity;
 
     private void Awake()
     {
@@ -163,8 +166,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-
-
         if (GameManager.Instance.a1 == false)
         {
             shootAction.Disable();
@@ -185,7 +186,10 @@ public class PlayerController : MonoBehaviour
         
         
         Vector2 input = moveAction.ReadValue<Vector2>();
-        Vector3 move = new Vector3(input.x, 0, input.y);
+        currentAnimationBlendVector = Vector2.SmoothDamp(currentAnimationBlendVector, input, ref animationVelocity, animationSmoothTime);
+        
+        
+        Vector3 move = new Vector3(currentAnimationBlendVector.x, 0, currentAnimationBlendVector.y);
         
         
         // takes into account camera direction while moving.
@@ -195,9 +199,11 @@ public class PlayerController : MonoBehaviour
         controller.Move(move * Time.deltaTime * playerSpeed); //moves
 
         //blend starfe animation
-        animator.SetFloat(moveXAnimationParameterId, input.x);
-        animator.SetFloat(moveZAnimationParameterId, input.y);
+        animator.SetFloat(moveXAnimationParameterId, currentAnimationBlendVector.x);
+        animator.SetFloat(moveZAnimationParameterId, currentAnimationBlendVector.y);
         //handles hover.
+
+
         if (hoverAction.triggered && !isHovering)
         {
             
