@@ -66,7 +66,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float animationSmoothTime = 0.1f;
 
+    [SerializeField]
+    private float animationPlayTransition = 0.15f;
+
+
     Animator animator;
+    int jumpAnimation;
     int moveXAnimationParameterId;
     int moveZAnimationParameterId;
 
@@ -89,6 +94,7 @@ public class PlayerController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         animator = GetComponent<Animator>();
+        jumpAnimation = Animator.StringToHash("Pistol Jump");
         moveXAnimationParameterId = Animator.StringToHash("MoveX");
         moveZAnimationParameterId = Animator.StringToHash("MoveZ");
     }
@@ -222,6 +228,7 @@ public class PlayerController : MonoBehaviour
         if (jumpAction.triggered && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            animator.CrossFade(jumpAnimation, animationPlayTransition);
             isJumping = true;
             jumpTimer = jumpCooldown;
         }

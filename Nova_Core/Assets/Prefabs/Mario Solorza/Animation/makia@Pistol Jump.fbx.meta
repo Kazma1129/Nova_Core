@@ -1,0 +1,501 @@
+fileFormatVersion: 2
+guid: 179db8bfdccfb1d4381ac547515d4719
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 60
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: makia_2_0:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: makia_2_0:Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: makia@Idle(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: makia_2_0:Mesh
+      parentName: makia@Idle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: makia_2_0:Hips
+      parentName: makia@Idle(Clone)
+      position: {x: -0.00016799859, y: 1.149773, z: 0.0013535595}
+      rotation: {x: 1.2046692e-18, y: 0.0000000031044087, z: -3.7397858e-27, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: makia_2_0:Spine
+      parentName: makia_2_0:Hips
+      position: {x: -0, y: 0.098493956, z: -0.006343451}
+      rotation: {x: -0.03215228, y: -0.0000000062056067, z: -1.9962762e-10, w: 0.999483}
+      scale: {x: 1, y: 1, z: 1}
+    - name: makia_2_0:Spine1
+      parentName: makia_2_0:Spine
+      position: {x: -0, y: 0.11514766, z: -2.0565977e-10}
+      rotation: {x: 0.0000000037252903, y: 0.0000000015115833, z: 6.806353e-10, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: makia_2_0:Spine2
+      parentName: makia_2_0:Spine1
+      position: {x: -0, y: 0.13159743, z: 1.05693045e-10}
+      rotation: {x: -0, y: 0.0000000031478713, z: -5.749731e-10, w: 1}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: makia_2_0:LeftShoulder
+      parentName: makia_2_0:Spine2
+      position: {x: -0.041306637, y: 0.12501477, z: -0.0017110549}
+      rotation: {x: 0.5643511, y: -0.41745254, z: 0.5831439, w: 0.408882}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: makia_2_0:LeftArm
+      parentName: makia_2_0:LeftShoulder
+      position: {x: -1.4143739e-10, y: 0.094800726, z: 0.0000000013991325}
+      rotation: {x: -0.14374182, y: -0.0042358637, z: -0.011004834, w: 0.98954505}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: makia_2_0:LeftForeArm
+      parentName: makia_2_0:LeftArm
+      position: {x: 3.3152264e-10, y: 0.24937987, z: -0.0000000017584038}
+      rotation: {x: -0.006423889, y: 0.0003910455, z: -0.03969017, w: 0.99919134}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.99999994}
+    - name: makia_2_0:LeftHand
+      parentName: makia_2_0:LeftForeArm
+      position: {x: -0.0000000012651381, y: 0.29830208, z: -0.0000000039863894}
+      rotation: {x: 0.050979834, y: -0.003995423, z: -0.07803009, w: 0.99563867}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000005}
+    - name: makia_2_0:LeftHandIndex1
+      parentName: makia_2_0:LeftHand
+      position: {x: 8.200184e-10, y: 0.061639015, z: 2.975541e-10}
+      rotation: {x: -0.06151183, y: 0.00025724198, z: -0.0041746297, w: 0.9980976}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
+    - name: makia_2_0:LeftHandIndex2
+      parentName: makia_2_0:LeftHandIndex1
+      position: {x: -3.920452e-10, y: 0.043766767, z: 3.640426e-10}
+      rotation: {x: -0.09482121, y: 0.000000045256446, z: -0.31418896, w: 0.9446133}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
+    - name: makia_2_0:LeftHandIndex3
+      parentName: makia_2_0:LeftHandIndex2
+      position: {x: -0.020062568, y: 0.023892242, z: 0.0060548233}
+      rotation: {x: 0.03210693, y: -0.08830547, z: 0.4548388, w: 0.8856032}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: makia_2_0:LeftHandIndex4
+      parentName: makia_2_0:LeftHandIndex3
+      position: {x: 0.011936023, y: 0.035843726, z: 0.006116324}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: makia_2_0:Neck
+      parentName: makia_2_0:Spine2
+      position: {x: -0, y: 0.14804699, z: -0.0000000016439942}
+      rotation: {x: 0.03215227, y: -0.0000000016325004, z: 0.0000000024711213, w: 0.999483}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: makia_2_0:Head
+      parentName: makia_2_0:Neck
+      position: {x: -0, y: 0.057844087, z: 0.02171486}
+      rotation: {x: 0.000000014901161, y: -3.8805092e-10, z: -0.0000000034924599,
+        w: 1}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: makia_2_0:HeadTop_End
+      parentName: makia_2_0:Head
+      position: {x: -0, y: 0.19588265, z: 0.07353498}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: makia_2_0:RightShoulder
+      parentName: makia_2_0:Spine2
+      position: {x: 0.041306637, y: 0.12498556, z: -0.0012575855}
+      rotation: {x: -0.56757253, y: -0.41518044, z: 0.5802821, w: -0.41080344}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.99999994}
+    - name: makia_2_0:RightArm
+      parentName: makia_2_0:RightShoulder
+      position: {x: 5.838273e-11, y: 0.094800726, z: 0.0000000014052465}
+      rotation: {x: -0.14378686, y: 0.006133913, z: 0.010214536, w: 0.989537}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999998}
+    - name: makia_2_0:RightForeArm
+      parentName: makia_2_0:RightArm
+      position: {x: -2.75476e-10, y: 0.24939357, z: 0.0000000015910704}
+      rotation: {x: -0.006292625, y: -0.0003646872, z: 0.03979765, w: 0.99918795}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
+    - name: makia_2_0:RightHand
+      parentName: makia_2_0:RightForeArm
+      position: {x: 0.000000002968978, y: 0.29806188, z: -0.0000000026442086}
+      rotation: {x: -0.031296626, y: -0.001931241, z: -0.061561856, w: -0.9976106}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
+    - name: makia_2_0:RightHandIndex1
+      parentName: makia_2_0:RightHand
+      position: {x: -0.0000000017085452, y: 0.11652499, z: -7.3987977e-10}
+      rotation: {x: 0.017518131, y: 0.0007616542, z: 0.043423347, w: 0.9989029}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000005}
+    - name: makia_2_0:RightHandIndex2
+      parentName: makia_2_0:RightHandIndex1
+      position: {x: 2.1206072e-10, y: 0.0128690675, z: -1.9590732e-10}
+      rotation: {x: -0.10723321, y: 0.0000001448206, z: 0.04548779, w: 0.99319285}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: makia_2_0:RightHandIndex3
+      parentName: makia_2_0:RightHandIndex2
+      position: {x: 0.0025590882, y: 0.02078767, z: 0.006032656}
+      rotation: {x: 0.06705374, y: -0.00613622, z: -0.0072998772, w: 0.99770385}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: makia_2_0:RightHandIndex4
+      parentName: makia_2_0:RightHandIndex3
+      position: {x: 0.0017059253, y: 0.017209163, z: 0.0012040896}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: makia_2_0:LeftUpLeg
+      parentName: makia_2_0:Hips
+      position: {x: -0.07953024, y: -0.054771546, z: -0.00025945678}
+      rotation: {x: 0.001955141, y: -0.020793676, z: 0.9953915, w: 0.09359303}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: makia_2_0:LeftLeg
+      parentName: makia_2_0:LeftUpLeg
+      position: {x: 0.0000000041016355, y: 0.51924664, z: -9.014704e-10}
+      rotation: {x: -0.02154826, y: -0.0009855757, z: 0.045678873, w: 0.9987233}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: makia_2_0:LeftFoot
+      parentName: makia_2_0:LeftLeg
+      position: {x: 4.6300064e-10, y: 0.5037551, z: 8.869429e-11}
+      rotation: {x: 0.45847413, y: -0.075170055, z: 0.038956527, w: 0.88466567}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000001}
+    - name: makia_2_0:LeftToeBase
+      parentName: makia_2_0:LeftFoot
+      position: {x: 5.7411004e-10, y: 0.12889853, z: 0.000000003255384}
+      rotation: {x: 0.31764707, y: 0.049033865, z: -0.01645068, w: 0.9467975}
+      scale: {x: 0.9999998, y: 1.0000001, z: 0.9999998}
+    - name: makia_2_0:LeftToe_End
+      parentName: makia_2_0:LeftToeBase
+      position: {x: 1.5269368e-10, y: 0.051946755, z: 4.549294e-12}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: makia_2_0:RightUpLeg
+      parentName: makia_2_0:Hips
+      position: {x: 0.07953024, y: -0.054771546, z: 0.0003782071}
+      rotation: {x: -0.0020787641, y: -0.02211079, z: 0.99536407, w: -0.09357996}
+      scale: {x: 1.0000007, y: 1.0000008, z: 1}
+    - name: makia_2_0:RightLeg
+      parentName: makia_2_0:RightUpLeg
+      position: {x: -0.000000005005838, y: 0.5193038, z: -3.445193e-10}
+      rotation: {x: -0.018337531, y: 0.0008385008, z: -0.04566916, w: 0.99878794}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: makia_2_0:RightFoot
+      parentName: makia_2_0:RightLeg
+      position: {x: -0.0000000018280863, y: 0.5036023, z: -0.0000000025570928}
+      rotation: {x: 0.45481527, y: 0.07609491, z: -0.0390415, w: 0.88646966}
+      scale: {x: 1.0000006, y: 1.0000002, z: 1.0000001}
+    - name: makia_2_0:RightToeBase
+      parentName: makia_2_0:RightFoot
+      position: {x: -4.4375054e-10, y: 0.1282056, z: 0.0000000018472394}
+      rotation: {x: 0.31927553, y: -0.048651524, z: 0.016415238, w: 0.9462699}
+      scale: {x: 1.0000005, y: 1.0000006, z: 0.99999994}
+    - name: makia_2_0:RightToe_End
+      parentName: makia_2_0:RightToeBase
+      position: {x: 2.0521167e-10, y: 0.05095592, z: -1.18087e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 60
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: c2ce06848e97e544caad7c6e9ae1a9a2,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
