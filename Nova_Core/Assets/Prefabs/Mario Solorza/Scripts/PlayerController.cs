@@ -78,6 +78,13 @@ public class PlayerController : MonoBehaviour
     Vector2 currentAnimationBlendVector;
     Vector2 animationVelocity;
 
+    [SerializeField]
+    private Transform aimTarget;
+
+    [SerializeField]
+    private float aimDistance = 1f;
+
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -167,6 +174,8 @@ public class PlayerController : MonoBehaviour
     {
         jumpTimer -= Time.deltaTime;
         hoverTimer += Time.deltaTime;
+
+        aimTarget.position = cameraTransform.position + cameraTransform.forward * aimDistance;
 
         
 
