@@ -255,8 +255,8 @@ public class PlayerController : MonoBehaviour
 
 
         //rotates towards camera direction
-        float targetAngle = cameraTransform.eulerAngles.y;
-        Quaternion targetrotation = Quaternion.Euler(0, targetAngle, 0);
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetrotation, rotationSpeed * Time.deltaTime);
+       float targetAngle = cameraTransform.eulerAngles.y;
+       Quaternion targetrotation = Quaternion.Euler(0, targetAngle, 0);
+       transform.rotation = Quaternion.Lerp(transform.rotation, targetrotation, rotationSpeed * Time.deltaTime);
     }
 }
