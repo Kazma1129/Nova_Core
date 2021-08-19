@@ -33,7 +33,6 @@ public class EnemyShoot : MonoBehaviour
     public float damageTP;
     public static float damageToPlayer;
     private Transform cameraTransform; //to get main camera.
-
     
     /* for missing the target, maybe I'll find a better use for this.
     [SerializeField]
@@ -51,6 +50,7 @@ public class EnemyShoot : MonoBehaviour
 
     private void Update()
     {
+        
         timer -= Time.deltaTime;
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer); // range for player
@@ -109,8 +109,8 @@ public class EnemyShoot : MonoBehaviour
     private void attackPlayer() {
         agent.SetDestination(transform.position); // set destination to player
         transform.LookAt(player); //look at player
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position), 10 * Time.deltaTime);
 
-        
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer //oddly enough it shoots at feet.
      
