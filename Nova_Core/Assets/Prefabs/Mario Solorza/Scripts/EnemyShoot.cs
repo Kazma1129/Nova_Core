@@ -32,8 +32,8 @@ public class EnemyShoot : MonoBehaviour
     public float timer;
     public float damageTP;
     public static float damageToPlayer;
-    private Transform cameraTransform; //to get main camera.
-    
+    GameObject target;
+
     /* for missing the target, maybe I'll find a better use for this.
     [SerializeField]
     private float bulletHitMissDistance = 25f;
@@ -42,16 +42,15 @@ public class EnemyShoot : MonoBehaviour
     private void Awake()
     {
         damageToPlayer = damageTP;
+       // target = GameObject.Find("Player");
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        cameraTransform = Camera.main.transform;
 
     }
 
     private void Update()
     {
-        
-        timer -= Time.deltaTime;
+          timer -= Time.deltaTime;
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer); // range for player
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer); //range for attack
@@ -72,6 +71,7 @@ public class EnemyShoot : MonoBehaviour
 
     }
 
+    
 
     private void patrolling() {
         if (!walkPointSet) searchWalkPoint();
@@ -108,21 +108,24 @@ public class EnemyShoot : MonoBehaviour
 
     private void attackPlayer() {
         agent.SetDestination(transform.position); // set destination to player
+      //  Vector3 targetPos = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
         transform.LookAt(player); //look at player
-        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position), 10 * Time.deltaTime);
 
-        RaycastHit hit;
+      /*  RaycastHit hit;
+       
+
         // Does the ray intersect any objects excluding the player layer //oddly enough it shoots at feet.
      
-            if (timer <=0 &&Physics.Raycast(shootPoint.position, shootPoint.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, whatIsPlayer))
+            /*if (timer <=0 &&Physics.Raycast(shootPoint.position, shootPoint.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, whatIsPlayer))
             {
+
 
                 Debug.DrawRay(shootPoint.position, shootPoint.TransformDirection(Vector3.forward) * hit.distance, Color.red);
                 Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
                 rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
                 timer = timeBetweenAttacks;
             }
-        
+        */
         
         //attack based on projectile (will be replaced by raycast)
         /*
@@ -135,42 +138,31 @@ public class EnemyShoot : MonoBehaviour
         
 
 
-        /*
-        Vector3 fwd = transform.TransformDirection(Vector3.forward);
-
-        if (Physics.Raycast(transform.position, fwd, Mathf.Infinity))
-            Debug.DrawRay(shootPoint.position, shootPoint.forward, Color.green);//print("There is something in front of the object!");
-
-
-
-
-
-        ////Raycast Test
-        /*
-        RaycastHit hit;
-        GameObject bullet = GameObject.Instantiate(projectile, shootPoint.position, Quaternion.identity);
-        BulletController bulletController = bullet.GetComponent<BulletController>();
-        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, Mathf.Infinity))
-        {
-
-            bulletController.target = hit.point;
-            bulletController.hit = true;
-        }
-        else
-        {
-            bulletController.target = cameraTransform.position + cameraTransform.forward * bulletHitMissDistance;
-            bulletController.hit = false;
-        }
-
-        */
-
         //////////////////////////////////////////////////////////////////////////////
+        /*
         if (!alreadyAttacked)
         {
-            alreadyAttacked = true;
+            if (timer <= 0)
+            {
+                Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
+                rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+                timer = timeBetweenAttacks;
+            }
+            /*
+            if (timer <= 0 && Physics.Raycast(shootPoint.position, shootPoint.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, whatIsPlayer))
+            {
+
+                Debug.DrawRay(shootPoint.position, shootPoint.TransformDirection(Vector3.forward) * hit.distance, Color.red);
+                Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
+                rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+                timer = timeBetweenAttacks;
+            }*/
+          /*  alreadyAttacked = true;
             resetAttack();
-        }
+        }*/
     }
+
+
 
     private void resetAttack() {
         alreadyAttacked = false;

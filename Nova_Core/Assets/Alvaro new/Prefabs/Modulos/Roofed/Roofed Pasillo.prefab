@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7719047163193762071}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Roofed Pasillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +44,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 788706798397512069, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 788706798397512070, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
       propertyPath: m_Mesh
@@ -69,10 +74,25 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 788706798514897834, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706798539942094, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 788706798569412005, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706798569412008, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 788706798569412010, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
@@ -99,6 +119,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 788706798705295262, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 788706798857603356, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
       propertyPath: m_Mesh
@@ -114,10 +139,20 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 788706798857603362, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 788706799215889273, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706799215889276, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 788706799215889278, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
@@ -133,6 +168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pasillo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706799515399122, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 788706799515399123, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
@@ -204,6 +244,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 788706800031607854, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977237554793588414, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676177173204782171, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ad0dbc88f64cae46a51d0040584869f, type: 3}
 --- !u!4 &152852256827994338 stripped
@@ -223,6 +278,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706798397512069, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 788706798397512070, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
@@ -249,10 +309,25 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 788706798514897834, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706798539942094, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 788706798569412005, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706798569412008, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 788706798569412010, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
@@ -279,6 +354,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 788706798705295262, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 788706798857603356, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
       propertyPath: m_Mesh
@@ -294,10 +374,20 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 788706798857603362, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 788706799215889273, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706799215889276, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 788706799215889278, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
@@ -313,6 +403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pasillo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706799515399122, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 788706799515399123, guid: 7ad0dbc88f64cae46a51d0040584869f,
         type: 3}
@@ -383,6 +478,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 788706800031607854, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977237554793588414, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676177173204782171, guid: 7ad0dbc88f64cae46a51d0040584869f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ad0dbc88f64cae46a51d0040584869f, type: 3}

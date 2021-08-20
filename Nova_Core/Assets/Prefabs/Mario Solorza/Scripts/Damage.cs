@@ -7,33 +7,42 @@ public class Damage : MonoBehaviour
     private bool hit;
     private static float damageReceived;
     public Transform PlayerTransform;
-    public Transform TeleportGoal;
-
+    public GameObject TeleportGoal;
+    [SerializeField]
+    public CharacterController chara;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Bullet Enemy") {
             hit = true;
-            damageReceived = EnemyShoot.damageToPlayer;
+            damageReceived = EnemyAi2.damageToPlayer;
             
         }
     }
 
-
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
+    }
 
-        if (hit) {
+    private void Update()
+    {
+        if (hit)
+        {
             GameManager.Instance.playerHP -= damageReceived;
             hit = false;
         }
 
-        if (GameManager.Instance.playerHP <= 0) {
-            GameManager.Instance.playerHP = 100f;
-            PlayerTransform.position = TeleportGoal.position;// should work only teleporting children objects for some reason.
-        }
 
+        if (GameManager.Instance.playerHP <= 0)
+        {
+            GameManager.Instance.playerHP = 100f;
+          //  GetComponent<CharacterController>().enabled = false;
+            transform.position = TeleportGoal.transform.position;
+            //GetComponent<CharacterController>().enabled = true;
+        }
     }
+
+
+
+
 }

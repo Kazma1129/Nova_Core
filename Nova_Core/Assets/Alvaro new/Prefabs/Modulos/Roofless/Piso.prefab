@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4333685099449611115}
   - component: {fileID: 4333685099449611114}
   - component: {fileID: 4333685099449611113}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4333685099681267488}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}

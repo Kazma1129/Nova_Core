@@ -7,7 +7,7 @@ public class SceneLoader : MonoBehaviour
 {
 
     public void sceneStart() {
-        SceneManager.LoadScene("Test Enviroment Mario Solorza");
+        SceneManager.LoadScene(1);
     }
 
     public void mainScreen() {

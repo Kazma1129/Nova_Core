@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305704613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.242, z: 0.561}
+  m_LocalPosition: {x: 0, y: 0.242, z: 0.752}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3126760583184839547}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_StopNaN: 0
   m_Dithering: 0
   m_ClearDepth: 1
+  m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -192,6 +193,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -216,6 +218,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &3126760582671283949
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -285,6 +288,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -309,6 +313,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &3126760582978794281
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -334,9 +339,11 @@ GameObject:
   - component: {fileID: 3126760583184839546}
   - component: {fileID: 3126760583184839545}
   - component: {fileID: 3126760583184839544}
+  - component: {fileID: 3392178279480582277}
   - component: {fileID: 3126760583184839543}
   - component: {fileID: -4834107145269179017}
   - component: {fileID: 1329724203}
+  - component: {fileID: 1329724202}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -385,6 +392,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -409,6 +417,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &3126760583184839544
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -423,6 +432,36 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3392178279480582277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126760583184839542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde72ee23d688ab40ad4a328eaf402a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: -4834107145269179017}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 512
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  health: 10
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
+  timeBetweenAttacks: 0
+  projectile: {fileID: 9025515482713259575, guid: 429815b1049e15a498a8c3ffffee50f4,
+    type: 3}
+  sightRange: 20
+  attackRange: 15
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!54 &3126760583184839543
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -447,9 +486,9 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3126760583184839542}
   m_Enabled: 1
-  m_AgentTypeID: 0
+  m_AgentTypeID: -1372625422
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 10
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 150
@@ -468,12 +507,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3126760583184839542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e92cdb8f4a781344a999dc38db3bb84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: -4834107145269179017}
   player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
@@ -484,17 +522,32 @@ MonoBehaviour:
   projectile: {fileID: 9025515482713259575, guid: 429815b1049e15a498a8c3ffffee50f4,
     type: 3}
   shootPoint: {fileID: 1305704614}
+  agent: {fileID: -4834107145269179017}
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointSet: 0
   walkPointRange: 10
   distanceToReachedMagnitude: 0
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 0.5
   health: 50
-  sightRange: 15
-  attackRange: 10
+  sightRange: 17.13
+  attackRange: 14.25
   playerInSightRange: 0
   playerInAttackRange: 0
-  timer: 0
+  timer: 0.5
+  damageTP: 10
+--- !u!65 &1329724202
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126760583184839542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7343188841805722132
 GameObject:
   m_ObjectHideFlags: 0
