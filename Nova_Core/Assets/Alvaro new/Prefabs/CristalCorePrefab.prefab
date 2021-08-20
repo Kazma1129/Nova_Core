@@ -143,7 +143,7 @@ MonoBehaviour:
   walkPointSet: 0
   walkPointRange: 10
   distanceToReachedMagnitude: 0
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 0.1
   health: 50
   sightRange: 15
   attackRange: 10

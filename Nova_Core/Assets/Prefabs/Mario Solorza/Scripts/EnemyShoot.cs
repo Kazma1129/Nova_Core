@@ -32,19 +32,18 @@ public class EnemyShoot : MonoBehaviour
     public float timer;
     public float damageTP;
     public static float damageToPlayer;
-    private Transform cameraTransform; //to get main camera.
     
     /* for missing the target, maybe I'll find a better use for this.
     [SerializeField]
     private float bulletHitMissDistance = 25f;
     */
+    public float bulletSpeed =  5f;
 
     private void Awake()
     {
         damageToPlayer = damageTP;
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        cameraTransform = Camera.main.transform;
 
     }
 
@@ -70,7 +69,7 @@ public class EnemyShoot : MonoBehaviour
         if (health <= 0)
             Destroy(this.gameObject);
 
-    }
+    } 
 
 
     private void patrolling() {
@@ -102,25 +101,26 @@ public class EnemyShoot : MonoBehaviour
 
     private void chasePlayer() {
         //goes towards player.
-        agent.SetDestination(player.position);
+        agent.SetDestination(transform.position);
 
     }
 
     private void attackPlayer() {
         agent.SetDestination(transform.position); // set destination to player
-        transform.LookAt(player); //look at player
+        transform.LookAt(transform.position); //look at player
         //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(player.position), 10 * Time.deltaTime);
 
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer //oddly enough it shoots at feet.
      
-            if (timer <=0 &&Physics.Raycast(shootPoint.position, shootPoint.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, whatIsPlayer))
+            if (timer !=0 &&Physics.Raycast(shootPoint.position, shootPoint.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, whatIsPlayer))
             {
 
                 Debug.DrawRay(shootPoint.position, shootPoint.TransformDirection(Vector3.forward) * hit.distance, Color.red);
                 Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
-                rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-                timer = timeBetweenAttacks;
+                rb.AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+
+            timer = timeBetweenAttacks;
             }
         
         
