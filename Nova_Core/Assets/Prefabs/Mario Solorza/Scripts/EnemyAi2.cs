@@ -7,9 +7,7 @@ public class EnemyAi2 : MonoBehaviour
     public NavMeshAgent agent;
 
     public Transform player;
-    public Transform targetpos;
     //public GameObject gun;
-    public Transform enemyPos;
 
     //Stats
     public float health;
@@ -50,7 +48,6 @@ public class EnemyAi2 : MonoBehaviour
     {
         if (other.tag == "Player Bullet")
         {
-            Destroy(other.gameObject);
             hit = true;
         }
     }
@@ -140,25 +137,16 @@ public class EnemyAi2 : MonoBehaviour
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
-
-        //transform.LookAt(player);
-        Vector3 lookAtPos = targetpos.position - enemyPos.transform.position;
-        // lookAtPos.y = player.transform.position.y; // do not rotate the player around x
-        Quaternion newRotation = Quaternion.LookRotation(lookAtPos, enemyPos.transform.up);
-        enemyPos.transform.rotation = Quaternion.Slerp(enemyPos.transform.rotation, newRotation, Time.deltaTime * 8);
-
-
+        transform.LookAt(player);
 
         if (!alreadyAttacked)
         {
 
             //Attack
-            //            Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
-
             Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
-            //  Vector3 dir = Quaternion.AngleAxis(shootAngle, Vector3.forward) * Vector3.right;
+
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(-transform.up * 11f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 2, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke("ResetAttack", timeBetweenAttacks);

@@ -15,11 +15,8 @@ EditorBuildSettings:
     path: Assets/Prefabs/Mario Solorza/Stage.unity
     guid: ddc56f4a4ef22d74f90b3b6d4830a115
   - enabled: 1
-    path: Assets/Prefabs/Mario Solorza/Ending.unity
-    guid: 15c76fe140b456b4f967d5e3abe149d3
-  - enabled: 1
-    path: Assets/Prefabs/Mario Solorza/Creditos.unity
-    guid: 345ba28cad62f4d43b84281505cf7495
+    path: Assets/Prefabs/Mario Solorza/Credits.unity
+    guid: 3cb90f4f8245e5848bb12d6d6f23d7f3
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 45a5c2bbb37a23a48b8381280cfa23cd,
       type: 2}

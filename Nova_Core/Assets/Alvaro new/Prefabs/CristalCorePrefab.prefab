@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 276715392882187129}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457201931767315933}
-  m_LocalRotation: {x: 0.43797272, y: -0.11590251, z: -0.037563697, w: 0.8906939}
-  m_LocalPosition: {x: 0, y: -0.22252414, z: 0.34191948}
+  m_LocalRotation: {x: -0.14133325, y: -0, z: -0, w: -0.9899621}
+  m_LocalPosition: {x: 0, y: -0.06781156, z: 0.07557177}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3374100384927020440}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 35.15, y: -17.023, z: -7.954}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &760079485732301968
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6685473526059595867}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: TailBlock2_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2228421510813224967}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: FrontLeft_Leg_Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5801124211999403475}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: TailBlock5_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6739204037704613769}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Stinger_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6807848342742634716}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: FrontRigth_Leg_Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6801921600438631691}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: BackLeft_Leg_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6814143082058705070}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: FrontLeft_Leg_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6354459100527410389}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: TailBlock3_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 2272380768301112376}
   - component: {fileID: 4367387263836971510}
   - component: {fileID: 2894804973894578679}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Root_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,9 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   player: {fileID: 0}
-  targetpos: {fileID: 0}
-  enemyPos: {fileID: 0}
-  health: 100
+  health: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 136
@@ -520,7 +518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3921942819789266504}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: BackRigth_Leg_Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8724773152355248521}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: BackRigth_Leg_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8509830493920696957}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: TailBlock4_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758561508951322394}
   - component: {fileID: 6148491979107912143}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: CristalCore_geo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8169649949138724620}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: FrontRigth_Leg_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2253230623907298766}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: TailBlock1_jnt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +767,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1792737726245877153}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: BackLeft_Leg_Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3374100384927020440}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Stinger_Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,7 +828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7848255395490383534}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: CristalCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,7 +866,7 @@ GameObject:
   - component: {fileID: 7896177447030691626}
   - component: {fileID: 8459067168219530212}
   - component: {fileID: 5119634682296070585}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: CristalCorePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,8 +981,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   player: {fileID: 0}
-  targetpos: {fileID: 0}
-  enemyPos: {fileID: 5231890417480786114}
   health: 100
   whatIsGround:
     serializedVersion: 2
@@ -1042,7 +1038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3046959164592432110}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Torso_Jin
   m_TagString: Untagged
   m_Icon: {fileID: 0}

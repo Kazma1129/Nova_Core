@@ -20,23 +20,9 @@ public class SceneLoader : MonoBehaviour
 
     public void credits()
     {
-        SceneManager.LoadScene("Creditos");
+        SceneManager.LoadScene("Credits");
     }
 
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player") {
-            Ending();
-        }
-    }
-
-    public void Ending()
-    {
-        SceneManager.LoadScene("Ending");
-    }
-
-
-
+ 
 
 }
