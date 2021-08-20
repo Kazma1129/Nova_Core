@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7478330976911802458}
   - component: {fileID: 7529474924734187787}
   - component: {fileID: 4386610752481127146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Prism (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,6 +228,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -252,6 +253,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &7529474924734187787
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -287,7 +289,7 @@ GameObject:
   - component: {fileID: 2099233992800698544}
   - component: {fileID: 7568094811384545227}
   - component: {fileID: 4174829063441003876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Prism (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,6 +504,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -526,6 +529,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &7568094811384545227
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -561,7 +565,7 @@ GameObject:
   - component: {fileID: 8283559924841706273}
   - component: {fileID: 8283559924841706272}
   - component: {fileID: 8283559924841706275}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Prism
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,6 +780,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -800,6 +805,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559924841706272
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -835,7 +841,7 @@ GameObject:
   - component: {fileID: 8283559924902422753}
   - component: {fileID: 8283559924902422752}
   - component: {fileID: 8283559924902422755}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,6 +1093,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1111,6 +1118,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559924902422752
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1146,7 +1154,7 @@ GameObject:
   - component: {fileID: 8283559925069416175}
   - component: {fileID: 8283559925069416174}
   - component: {fileID: 8283559925069416177}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Prism (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,6 +1369,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1386,6 +1395,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559925069416174
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1421,7 +1431,7 @@ GameObject:
   - component: {fileID: 8283559925253181521}
   - component: {fileID: 8283559925253181520}
   - component: {fileID: 8283559925253181523}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,6 +1683,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1697,6 +1708,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559925253181520
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1728,7 +1740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8283559925658926664}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Paredes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1773,7 +1785,7 @@ GameObject:
   - component: {fileID: 8283559925924736143}
   - component: {fileID: 8283559925924736142}
   - component: {fileID: 8283559925924736145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2025,6 +2037,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2049,6 +2062,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559925924736142
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2084,7 +2098,7 @@ GameObject:
   - component: {fileID: 8283559925996471136}
   - component: {fileID: 8283559925996471139}
   - component: {fileID: 8283559925996471138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Piso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2336,6 +2350,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2360,6 +2375,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559925996471139
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2391,7 +2407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8283559926107448039}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pasillo L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2429,7 +2445,7 @@ GameObject:
   - component: {fileID: 8283559926158351077}
   - component: {fileID: 8283559926158351076}
   - component: {fileID: 8283559926158351079}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2681,6 +2697,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2705,6 +2722,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559926158351076
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2740,7 +2758,7 @@ GameObject:
   - component: {fileID: 8283559926465266478}
   - component: {fileID: 8283559926465266481}
   - component: {fileID: 8283559926465266480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2992,6 +3010,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3016,6 +3035,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559926465266481
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3051,7 +3071,7 @@ GameObject:
   - component: {fileID: 8283559926513895443}
   - component: {fileID: 8283559926513895442}
   - component: {fileID: 8283559926513895445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Prism
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3266,6 +3286,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3291,6 +3312,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559926513895442
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3326,7 +3348,7 @@ GameObject:
   - component: {fileID: 8283559926521583618}
   - component: {fileID: 8283559926521583621}
   - component: {fileID: 8283559926521583620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3578,6 +3600,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3602,6 +3625,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559926521583621
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3637,7 +3661,7 @@ GameObject:
   - component: {fileID: 8283559926670373221}
   - component: {fileID: 8283559926670373220}
   - component: {fileID: 8283559926670373223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3889,6 +3913,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3913,6 +3938,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559926670373220
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3948,7 +3974,7 @@ GameObject:
   - component: {fileID: 8283559926706758213}
   - component: {fileID: 8283559926706758212}
   - component: {fileID: 8283559926706758215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Prism
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4163,6 +4189,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4187,6 +4214,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &8283559926706758212
 MeshFilter:
   m_ObjectHideFlags: 0
