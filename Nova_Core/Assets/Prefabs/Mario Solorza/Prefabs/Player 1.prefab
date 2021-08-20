@@ -993,7 +993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355743412670894872}
   - component: {fileID: 2355743412670894873}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: lefttHandIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1050,7 +1050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355743412785094744}
   - component: {fileID: 2355743412785094745}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: PistolArmRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1135,7 +1135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355743413240378973}
   - component: {fileID: 2355743413240378974}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: RightHandIK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1222,7 +1222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355743413560284849}
   - component: {fileID: 2355743413560284850}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: HeadAim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1309,7 +1309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355743413691114073}
   - component: {fileID: 2355743413691114074}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: ChestAim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2355743413872982638}
   - component: {fileID: 2355743413872982639}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: AimRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1602,7 +1602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2355743414448179813}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: ref_aim_target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1754,7 +1754,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3202096679277826859}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.4
@@ -1890,7 +1890,7 @@ MonoBehaviour:
   groundCheck: {fileID: 2355743412584956394}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 136
   groundcheckRadius: 0.1
   groundedPlayer: 0
   animationSmoothTime: 0.1
@@ -1940,8 +1940,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94421cdf9b08c224fbfa99f5fda78a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerTransform: {fileID: 2827118562007599505}
+  PlayerTransform: {fileID: 2355743414061144344}
   TeleportGoal: {fileID: 0}
+  chara: {fileID: 2355743412833675051}
 --- !u!114 &2355743412833675052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3222,12 +3223,12 @@ PrefabInstance:
     - target: {fileID: 1214527706710196037, guid: 6d62a9ee49f53ed4ca6a2dcae571ad64,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1214527707518038080, guid: 6d62a9ee49f53ed4ca6a2dcae571ad64,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4712872581133079280, guid: 6d62a9ee49f53ed4ca6a2dcae571ad64,
         type: 3}
@@ -3237,7 +3238,7 @@ PrefabInstance:
     - target: {fileID: 4712872581133079280, guid: 6d62a9ee49f53ed4ca6a2dcae571ad64,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4712872581133079282, guid: 6d62a9ee49f53ed4ca6a2dcae571ad64,
         type: 3}
@@ -3304,10 +3305,15 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 2355743414175103162}
+    - target: {fileID: 4712872581133079285, guid: 6d62a9ee49f53ed4ca6a2dcae571ad64,
+        type: 3}
+      propertyPath: m_CollideAgainst.m_Bits
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4712872581346487131, guid: 6d62a9ee49f53ed4ca6a2dcae571ad64,
         type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d62a9ee49f53ed4ca6a2dcae571ad64, type: 3}

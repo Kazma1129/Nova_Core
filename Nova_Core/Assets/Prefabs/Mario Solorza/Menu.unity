@@ -485,8 +485,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1034140078}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: sceneStart
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: salir
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -613,7 +613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1263, y: -673}
+  m_AnchoredPosition: {x: 1175, y: -510}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &747881468
@@ -704,7 +704,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1034140078}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: salir
+        m_MethodName: credits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

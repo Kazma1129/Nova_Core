@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Damage : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Damage : MonoBehaviour
     public GameObject TeleportGoal;
     [SerializeField]
     public CharacterController chara;
+    public string sceneName;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,8 +38,9 @@ public class Damage : MonoBehaviour
         if (GameManager.Instance.playerHP <= 0)
         {
             GameManager.Instance.playerHP = 100f;
+            SceneManager.LoadScene(1);
           //  GetComponent<CharacterController>().enabled = false;
-            transform.position = TeleportGoal.transform.position;
+           // transform.position = TeleportGoal.transform.position; working
             //GetComponent<CharacterController>().enabled = true;
         }
     }
